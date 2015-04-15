@@ -7,10 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = 'cookbook_commits'
   spec.version       = CookbookCommits::VERSION
   spec.authors       = ['James Awesome']
-  spec.email         = ['awesome@shopkeep.com']
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ''
+  spec.email         = ['james@wesome.nyc']
+  spec.summary       = %q{List commits for an organizations cookbooks}
+  spec.homepage      = 'https://github.com/jamesawesome/cookbook_commits'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
