@@ -4,10 +4,10 @@ require 'cookbook_commits'
 
 module CookbookCommits
   class CLI < Thor
+    class_option :org, desc: 'org to list cookbook commits for', required: true
 
     desc :since, 'DATE print cookbook commit logs since DATE'
     option :redact_author, default: true
-    option :org, desc: 'org to list cookbook commits for', required: true
     def since(date)
       commit_finder.all(options[:org], since: date) do |cookbook, commits|
         print_cookbook(cookbook)
@@ -20,7 +20,6 @@ module CookbookCommits
 
     desc :for, 'AUTHOR print cookbook commit logs for AUTHOR'
     option :since, desc: 'Print only commits since DATE'
-    option :org, desc: 'org to list cookbook commits for', required: true
     def for(author)
       args = { author: author }
       args[:since] = options[:since] if options[:since]
