@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'cookbook_commits/cli'
+
+CookbookCommits::CLI.start
